@@ -1,0 +1,96 @@
+      heroes.keySet().stream().sorted()
+      .forEach(key -> System.out.println("public static String " + key.toLowerCase().replace(" ", "_") +" = " + "\"" + key +"\";"));
+
+
+
+    public static void parsing () //пока не используется
+    {
+        String url = "https://www.dotabuff.com/heroes/abaddon/counters";
+        String userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"; // User-Agent
+        // 1. Подключение к сайту и получение HTML
+        try {
+            // 1. Подключение к сайту и получение HTML
+            Document doc = Jsoup.connect(url)
+                    .userAgent(userAgent) // Установка User-Agent
+                    .timeout(5000) // Установка таймаута (5 секунд)
+                    .get();
+
+            // 1. Выбор таблицы
+            Element table = doc.select("table.sortable").first();
+
+            if (table != null) {
+                // 2. Выбор строк таблицы (исключаем строку заголовка)
+                Elements rows = table.select("tbody > tr");
+
+                // Список для хранения данных о контр-пиках
+                List<Map<String, String>> counterPicks = new ArrayList<>();
+
+                // 3. Перебор строк и извлечение данных
+                for (Element row : rows) {
+                    Elements cells = row.select("td");
+
+                    // Проверка, что в строке достаточно ячеек
+                    if (cells.size() >= 5) { // Нужно как минимум 5 столбцов (Hero, Disadvantage, Win Rate, и другие)
+                        String hero = cells.get(1).text();       // 0 - это картинка, 1 - имя героя
+                        String disadvantage = cells.get(2).text(); // 2 - Disadvantage
+                        String winRate = cells.get(3).text();      // 3 - Win Rate
+
+                        // Создаем Map для хранения данных о герое
+                        Map<String, String> counterPick = new HashMap<>();
+                        counterPick.put("hero", hero);
+                        counterPick.put("disadvantage", disadvantage);
+                        counterPick.put("winRate", winRate);
+
+                        counterPicks.add(counterPick);
+                    }
+                }
+
+                // 4. Вывод результатов
+                for (Map<String, String> counterPick : counterPicks) {
+                    System.out.println("Hero: " + counterPick.get("hero") +
+                            ", Disadvantage: " + counterPick.get("disadvantage") +
+                            ", Win Rate: " + counterPick.get("winRate"));
+                }
+
+            } else {
+                System.out.println("Table not found!");
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error connecting to the website: " + e.getMessage());
+        }
+    }
+
+
+    public static void temp (Map <String, String> heroes1) //пока не используется
+    {
+        String url = "https://www.dotabuff.com/heroes";
+        String userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"; // User-Agent
+        // 1. Подключение к сайту и получение HTML
+            try {
+                Document doc = Jsoup.connect(url)
+                        .userAgent(userAgent) // Установка User-Agent
+                        .timeout((int) (Math.random() * 3001 + 2000)) // Установка таймаута (5 секунд)
+                        .get();
+                System.out.println("Получилось");
+                // 2. Выбираем все элементы <img>
+                Elements images = doc.select("img");
+
+                // 3. Перебираем элементы <img> и извлекаем нужные атрибуты
+                System.out.println("Найдено " + images.size() + " изображений:");
+                for (Element image : images) {
+                    String src = image.attr("src"); // Получаем URL-адрес изображения
+                    String alt = image.attr("alt"); // Получаем альтернативный текст (если есть)
+
+                    System.out.println("  src: " + src);
+                    if (!alt.isEmpty()) {
+                        System.out.println("  alt: " + alt);
+                    }
+                }
+            }
+            catch (IOException e) {
+                System.err.println("Не получилось подключиться к ");
+            }
+        }
+
+

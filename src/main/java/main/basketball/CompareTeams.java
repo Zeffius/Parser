@@ -1,9 +1,9 @@
-package basketball;
+package main.basketball;
 
 import java.text.DecimalFormat;
 import java.util.List;
 
-import static basketball.Teams.*;
+import static main.basketball.Teams.*;
 
 /*
 Поставить названия команд

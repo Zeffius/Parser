@@ -1,4 +1,4 @@
-package basketball;
+package main.basketball;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -7,14 +7,12 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-import static basketball.Teams.teams;
+import static main.basketball.Teams.teams;
 
 public final class ParsingComand {
     public static List <String> parsingTeam(String team) {

@@ -1,6 +1,5 @@
-package org.example;
+package main.parserDota.Heroes;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,7 +8,7 @@ public class Heroes {
     String url;
 
 
-    static Map<String, String> toHeroes ()
+    public static Map<String, String> toHeroes()
     {
         Map <String, String> heroes = new HashMap<>();
         heroes.put("Abaddon", "https://www.dotabuff.com/heroes/abaddon/counters");
@@ -86,6 +85,7 @@ public class Heroes {
         heroes.put("Omniknight", "https://www.dotabuff.com/heroes/omniknight/counters");
         heroes.put("Oracle", "https://www.dotabuff.com/heroes/oracle/counters");
         heroes.put("Outworld Destroyer", "https://www.dotabuff.com/heroes/outworld-destroyer/counters");
+        heroes.put("Outworld Devourer", "https://www.dotabuff.com/heroes/outworld-destroyer/counters");
         heroes.put("Pangolier", "https://www.dotabuff.com/heroes/pangolier/counters");
         heroes.put("Phantom Assassin", "https://www.dotabuff.com/heroes/phantom-assassin/counters");
         heroes.put("Phantom Lancer", "https://www.dotabuff.com/heroes/phantom-lancer/counters");

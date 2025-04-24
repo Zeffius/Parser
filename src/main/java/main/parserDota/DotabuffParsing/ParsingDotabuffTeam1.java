@@ -1,5 +1,6 @@
-package org.example;
+package main.parserDota.DotabuffParsing;
 
+import main.parserDota.Heroes.Heroes;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -11,11 +12,29 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.example.Main.heroesTeam1;
-import static org.example.Main.heroesTeam2;
+import static main.parserDota.CompareTeamsDotaManual.heroesTeamManual1;
+import static main.parserDota.CompareTeamsDotaManual.heroesTeamManual2;
+import static main.parserDota.CompareTeamsDotaURL.heroesTeamUrl1;
+import static main.parserDota.CompareTeamsDotaURL.heroesTeamUrl2;
 
-public class ParsingDotabuff {
-    public static void parsingDotabuff(Map <String, String> heroes1) {
+
+public class ParsingDotabuffTeam1 {
+
+    public static void parsingDotabuff(Map <String, String> heroes1, byte identifier) {
+        List<String> heroesTeam1 = new ArrayList<>();
+        List<String> heroesTeam2 = new ArrayList<>();
+        if (identifier==0) {
+            heroesTeam1 = heroesTeamManual1;
+            heroesTeam2 = heroesTeamManual2;
+        }
+        else if (identifier==1)
+        {
+           heroesTeam1 = heroesTeamUrl1;
+           heroesTeam2 = heroesTeamUrl2;
+        }
+      else System.out.println("Хуета в дотатабафф парсинг тим 1");
+
+
             double disAdvantage = 0.0;
             double winrate = 0;
             for(String hero : heroesTeam1) {
@@ -77,6 +96,9 @@ public class ParsingDotabuff {
                     System.err.println("Error connecting to the website: " + e.getMessage());
                 }
             }
+
+            if (disAdvantage>10.0||disAdvantage<10.0) System.out.println("МАТЧ");
+
             System.out.println("ОБЩАЯ СТАТИСТИКА");
             System.out.println("Предположительный винрейт команды 1 по отношению ко второй: " + winrate/25);
             System.out.println("Disadvantage (положительное - плохо, отрицательное - хорошо): " + disAdvantage);

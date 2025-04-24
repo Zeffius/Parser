@@ -1,4 +1,4 @@
-package org.example;
+package main.parserDota.OldCode;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -7,7 +7,6 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.*;
-import java.util.List;
 
 /*
 ЭТОТ КОД ДЛЯ ПОЛУЧЕНИЯ КАКИХ-ТО МАССОВЫХ ДАННЫХ, ЧТОБЫ ОФОРМИТЬ КАКУЮ-ТО БАЗУ ОБЪЕКТОВ

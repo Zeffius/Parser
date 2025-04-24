@@ -1,4 +1,4 @@
-package basketball;
+package main.basketball;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

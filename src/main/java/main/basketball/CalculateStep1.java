@@ -1,4 +1,4 @@
-package basketball;
+package main.basketball;
 
 import java.util.List;
 

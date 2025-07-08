@@ -11,7 +11,7 @@ import java.util.List;
 public class HtmlUnit {
     public static void main(String[] args) {
 
-        String url = "https://hawk.live/matches/156044";
+        String url = "https://ru.dltv.org/matches/420572";
 
         WebClient webClient = new WebClient();
         webClient.getOptions().setJavaScriptEnabled(true); // Включаем JavaScript

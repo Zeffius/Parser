@@ -23,17 +23,19 @@ public class CompareTeamsDotaManual{
 
     public static void createHeroes ()
     {
-        String hero1Team1 = morphling;
-        String hero2Team1 = beastmaster;
-        String hero3Team1 = centaur_warrunner;
-        String hero4Team1 = windranger;
-        String hero5Team1 = crystal_maiden;
 
-        String hero1Team2 = tiny;
-        String hero2Team2 = huskar;
-        String hero3Team2 = sand_king;
-        String hero4Team2 = tinker;
-        String hero5Team2 = ringmaster;
+        String hero1Team1 = dark_seer;
+        String hero2Team1 = earthshaker;
+        String hero3Team1 = puck;
+        String hero4Team1 = natures_prophet;
+        String hero5Team1 = shadow_shaman;
+
+        String hero1Team2 = pangolier;
+        String hero2Team2 = shadow_fiend;
+        String hero3Team2 = marci;
+        String hero4Team2 = ursa;
+        String hero5Team2 = tusk;
+
 
         heroesTeamManual1.add(hero1Team1);
         heroesTeamManual1.add(hero2Team1);
@@ -45,6 +47,8 @@ public class CompareTeamsDotaManual{
         heroesTeamManual2.add(hero3Team2);
         heroesTeamManual2.add(hero4Team2);
         heroesTeamManual2.add(hero5Team2);
+
+
         /*
         String hero1Team1 = ;
         String hero2Team1 = ;

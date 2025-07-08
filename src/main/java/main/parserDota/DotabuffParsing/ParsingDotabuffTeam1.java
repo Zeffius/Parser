@@ -16,7 +16,8 @@ import static main.parserDota.CompareTeamsDotaManual.heroesTeamManual1;
 import static main.parserDota.CompareTeamsDotaManual.heroesTeamManual2;
 import static main.parserDota.CompareTeamsDotaURL.heroesTeamUrl1;
 import static main.parserDota.CompareTeamsDotaURL.heroesTeamUrl2;
-
+import static main.parserDota.CompareTeamsDotaURLOld.heroesTeamUrl3;
+import static main.parserDota.CompareTeamsDotaURLOld.heroesTeamUrl4;
 
 public class ParsingDotabuffTeam1 {
 
@@ -32,6 +33,11 @@ public class ParsingDotabuffTeam1 {
            heroesTeam1 = heroesTeamUrl1;
            heroesTeam2 = heroesTeamUrl2;
         }
+        else if (identifier==2)
+        {
+            heroesTeam1 = heroesTeamUrl3;
+            heroesTeam2 = heroesTeamUrl4;
+        }
       else System.out.println("Хуета в дотатабафф парсинг тим 1");
 
 
@@ -45,7 +51,7 @@ public class ParsingDotabuffTeam1 {
                     // 1. Подключение к сайту и получение HTML
                     Document doc = Jsoup.connect(url)
                             .userAgent(userAgent) // Установка User-Agent
-                            .timeout(5000) // Установка таймаута (5 секунд)
+                            .timeout(15000) // Установка таймаута (5 секунд)
                             .get();
 
                     // 1. Выбор таблицы

@@ -20,7 +20,18 @@ public class CompareTeamsDotaURL {
 
 
     public static void compareTeams () {
-        String url = "https://ru.dltv.org/matches/420310"; //сюда ссылку на матч
+
+        //сюда ссылку на матч
+
+
+
+        String url = "https://ru.dltv.org/matches/421306/og-vs-1win-team-cct-season-2-series-2";
+
+
+
+
+
+
         int columnWidth = 40;
 
         Map<String, String> heroes = Heroes.toHeroes();

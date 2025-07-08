@@ -25,7 +25,7 @@ public class CompareTeamsDotaURL {
 
 
 
-        String url = "https://ru.dltv.org/matches/421306/og-vs-1win-team-cct-season-2-series-2";
+        String url = "https://ru.dltv.org/matches/421159/gaimin-gladiators-vs-betboom-team-esports-world-cup-2025";
 
 
 

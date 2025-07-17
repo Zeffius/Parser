@@ -1,0 +1,14 @@
+{
+  "name": "Java 17 Maven",
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+  "features": {
+    "maven": "latest"
+  },
+  "postCreateCommand": "mvn clean install",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "vscjava.vscode-java-pack"
+  ]
+}

@@ -8,7 +8,7 @@ import main.parserDota.CompareTeamsDotabuff;
 public class Main {
 
     public static void main(String[] args) {
-        int i = 0;
+        int i = 2;
 //        ParsingDLTVMatches.parseDLTVMatches();
         if (i==0) {
             CompareTeamsDotaURL.compareTeams(); //по ссылке

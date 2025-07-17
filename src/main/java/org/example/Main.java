@@ -3,6 +3,7 @@ package org.example;
 import main.parserDota.CompareTeamsDotaManual;
 import main.parserDota.CompareTeamsDotaURL;
 import main.parserDota.CompareTeamsDotaURLOld;
+import main.parserDota.CompareTeamsDotabuff;
 
 public class Main {
 
@@ -17,6 +18,9 @@ public class Main {
         }
         else if (i==2) {
             CompareTeamsDotaURLOld.compareTeams(); //старые игры
+        }
+        else if (i==3) {
+            CompareTeamsDotabuff.compareTeams(); //обычные игры дота
         }
         else System.out.println("Нихуя");
 

@@ -24,7 +24,7 @@ public class CompareTeamsDotaURLOld {
 
 
 
-        String url = "https://ru.dltv.org/matches/421327/kalmychata-vs-4pirates-european-pro-league-season-27";
+        String url = "https://ru.dltv.org/matches/421361/carstensz-vs-call911-lunar-snake-trophy-2";
 
 
 

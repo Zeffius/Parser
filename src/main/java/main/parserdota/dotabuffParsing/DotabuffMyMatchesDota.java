@@ -1,4 +1,4 @@
-package main.parserDota.DotabuffParsing;
+package main.parserdota.dotabuffParsing;
 
 
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class DotabuffMatches {
+public class DotabuffMyMatchesDota {
     public static List<String> parseDotabuffMatches(String url) {
         List<String> pickHeroes = new ArrayList<>();
 

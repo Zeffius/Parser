@@ -1,4 +1,4 @@
-package main.parserDota.DLTVMatches;
+package main.parserdota.dltvmatches;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -8,9 +8,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ParsingOldDLTVMatches {
+public class ParsingDLTVMatches {
     public static List<String> parseDLTVMatches(String url){
+//        String url = "https://ru.dltv.org/matches/419890";
         String userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, как Gecko) Chrome/132.0.0.0 YaBrowser/25.2.0.0 Safari/537.36"; // User-Agent
+//        int count = 0;
         List <String> pickHeroes = new ArrayList<>();
         try {
             // 1. Подключение к сайту и получение HTML
@@ -18,15 +20,31 @@ public class ParsingOldDLTVMatches {
                     .userAgent(userAgent) // Установка User-Agent
                     .timeout(15000) // Установка таймаута (15 секунд)
                     .get();
-            Elements pickPlayers = doc.select("div.map__finished-v2__pick div.pick");
+            Elements pickPlayers = doc.select("div.pick");
+            Elements pickPlayerss = doc.select("div.pick");
             for (org.jsoup.nodes.Element pickPlayer : pickPlayers) {
+
+//                String tippyContent = pickPlayer.attr("data-tippy-content");
                 pickHeroes.add(pickPlayer.attr("data-tippy-content"));
+//                System.out.println(tippyContent);
             }
-            return pickHeroes;
+//            for (String g: pickHeroes)
+//            {
+//                System.out.println(g);
+//            }
+//            System.out.println(pickPlayerss);
+//            list.stream()
+//                    .limit(10) // Оставить первые 10
+//                    .collect(Collectors.toList());
+            if (pickPlayerss.isEmpty()) System.out.println("Нихуя нет героев");
+//            System.out.println("_________________");
+//            System.out.println(pickHeroes.size());
+            return pickHeroes.subList(0, Math.min(10, pickHeroes.size()));
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Ошибка подключения к сайту");
             return null;
+
         }
     }
 }

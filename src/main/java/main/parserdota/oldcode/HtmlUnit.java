@@ -1,4 +1,4 @@
-package main.parserDota.OldCode;
+package main.parserdota.oldcode;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.DomElement;
 import com.gargoylesoftware.htmlunit.html.HtmlImage;

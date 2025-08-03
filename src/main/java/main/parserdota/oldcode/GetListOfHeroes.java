@@ -1,4 +1,4 @@
-package main.parserDota.OldCode;
+package main.parserdota.oldcode;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

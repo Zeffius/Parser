@@ -1,104 +1,83 @@
-package main.parserDota;
+package main.parserdota;
 
-import main.parserDota.DLTVMatches.ParsingDLTVMatches;
-import main.parserDota.DotabuffParsing.ParsingDotabuffTeam1;
-import main.parserDota.DotabuffParsing.ParsingDotabuffTeam2;
-import main.parserDota.Heroes.Heroes;
+import main.parserdota.dotabuffParsing.ParsingDotabuffTeam1;
+import main.parserdota.dotabuffParsing.ParsingDotabuffTeam2;
+import main.parserdota.heroes.Heroes;
+import main.parserdota.textwork.TextParsingTeam1;
+import main.parserdota.textwork.TextParsingTeam2;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class CompareTeamsDotaURL {
+public class CompareTeamsDotaManual{
 
-    public static List<String> heroesTeamUrl1 = new ArrayList<>();
-    public static List <String> heroesTeamUrl2 = new ArrayList <> ();
-//    public static List <String> heroesTeam = new ArrayList <> ();
+    public static List<String> heroesTeamManual1 = new ArrayList<>();
+    public static List <String> heroesTeamManual2 = new ArrayList <> ();
 
-    private CompareTeamsDotaURL() {
-    }
-
-
-    public static void compareTeams () {
-
-        //сюда ссылку на матч
-
-
-
-        String url = "https://ru.dltv.org/matches/421341/aurora-vs-parivision-esports-world-cup-2025";
-
-
-
-
-
-
-        int columnWidth = 40;
-
+    public static void compareTeams() {
         Map<String, String> heroes = Heroes.toHeroes();
-        List <String> heroesTeam = ParsingDLTVMatches.parseDLTVMatches(url); //через DLTV
-        System.out.printf("%-" + columnWidth + "s%s%n", "Команда 1:", "Команда 2:");
-        for(int i = 0; i<heroesTeam.size()-5;i++)
-        {
-            if (heroesTeam.get(i).equals("Outworld Devourer")) heroesTeamUrl1.add("Outworld Destroyer");
-            else heroesTeamUrl1.add(heroesTeam.get(i));
-
-            if (heroesTeam.get(i+5).equals("Outworld Devourer")) heroesTeamUrl2.add("Outworld Destroyer");
-            else heroesTeamUrl2.add(heroesTeam.get(i+5));
-            System.out.printf("%-" + columnWidth + "s%s%n", heroesTeamUrl1.get(i), heroesTeamUrl2.get(i));
-        }
-        System.out.println("");
-        ParsingDotabuffTeam1.parsingDotabuff(heroes, (byte)1);
+        createHeroes();
+        ParsingDotabuffTeam1.parsingDotabuff(heroes, (byte)0);
         System.out.println("________");
-        ParsingDotabuffTeam2.parsingDotabuff(heroes, (byte)1);
+        ParsingDotabuffTeam2.parsingDotabuff(heroes, (byte)0);
     }
 
-    //        ParsingComand.parsingTeam();
+    public static void compareTeamsText() {
+        Map<String, String> heroes = Heroes.toHeroes();
+        createHeroes();
+        TextParsingTeam1.parsingText((byte)0);
+        System.out.println("________");
+        TextParsingTeam2.parsingText((byte)0);
+//        ParsingDotabuffTeam1.parsingDotabuff(heroes, (byte)0);
+//        System.out.println("________");
+//        ParsingDotabuffTeam2.parsingDotabuff(heroes, (byte)0);
+    }
 
-    //готово
-//        temp(heroes);
-//        parsing();
+    public static void createHeroes ()
+    {
 
-  
-//    public static void createHeroes ()
-//    {
-//        String hero1Team1 = dragon_knight;
-//        String hero2Team1 = tusk;
-//        String hero3Team1 = outworld_destroyer;
-//        String hero4Team1 = mars;
-//        String hero5Team1 = hoodwink;
-//
-//        String hero1Team2 = natures_prophet;
-//        String hero2Team2 = ancient_apparition;
-//        String hero3Team2 = ember_spirit;
-//        String hero4Team2 = slark;
-//        String hero5Team2 = medusa;
-//
-//        heroesTeamUrl1.add(hero1Team1);
-//        heroesTeamUrl1.add(hero2Team1);
-//        heroesTeamUrl1.add(hero3Team1);
-//        heroesTeamUrl1.add(hero4Team1);
-//        heroesTeamUrl1.add(hero5Team1);
-//        heroesTeam2.add(hero1Team2);
-//        heroesTeam2.add(hero2Team2);
-//        heroesTeam2.add(hero3Team2);
-//        heroesTeam2.add(hero4Team2);
-//        heroesTeam2.add(hero5Team2);
-//        /*
-//        String hero1Team1 = ;
-//        String hero2Team1 = ;
-//        String hero3Team1 = ;
-//        String hero4Team1 = ;
-//        String hero5Team1 = ;
-//
-//        String hero1Team2 = ;
-//        String hero2Team2 = ;
-//        String hero3Team2 = ;
-//        String hero4Team2 = ;
-//        String hero5Team2 = ;
-//
-//
-//         */
-//    }
+        String hero1Team1 = abaddon;
+        String hero2Team1 = invoker;
+        String hero3Team1 = axe;
+        String hero4Team1 = marci;
+        String hero5Team1 = warlock;
+
+        String hero1Team2 = queen_of_pain;
+        String hero2Team2 = kunkka;
+        String hero3Team2 = undying;
+        String hero4Team2 = windranger;
+        String hero5Team2 = tusk;
+
+
+        heroesTeamManual1.add(hero1Team1);
+        heroesTeamManual1.add(hero2Team1);
+        heroesTeamManual1.add(hero3Team1);
+        heroesTeamManual1.add(hero4Team1);
+        heroesTeamManual1.add(hero5Team1);
+        heroesTeamManual2.add(hero1Team2);
+        heroesTeamManual2.add(hero2Team2);
+        heroesTeamManual2.add(hero3Team2);
+        heroesTeamManual2.add(hero4Team2);
+        heroesTeamManual2.add(hero5Team2);
+
+
+        /*
+        String hero1Team1 = ;
+        String hero2Team1 = ;
+        String hero3Team1 = ;
+        String hero4Team1 = ;
+        String hero5Team1 = ;
+
+        String hero1Team2 = ;
+        String hero2Team2 = ;
+        String hero3Team2 = ;
+        String hero4Team2 = ;
+        String hero5Team2 = ;
+
+
+         */
+    }
 
 
 
@@ -233,4 +212,15 @@ https://www.youtube.com/watch?v=Bw26a9tW7G8&t=2129s
     public static String witch_doctor = "Witch Doctor";
     public static String wraith_king = "Wraith King";
     public static String zeus = "Zeus";
+
+
+
+//    @Override
+//    public void CompareTeams() {
+//        Map<String, String> heroes = heroes.toHeroes();
+//        createHeroes();
+//        ParsingDotabuffTeam1.parsingDotabuff(heroes);
+//        System.out.println("________");
+//        ParsingDotabuffTeam2.parsingDotabuff(heroes);
+//    }
 }

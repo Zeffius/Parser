@@ -1,4 +1,4 @@
-package main.parserDota.DLTVMatches;
+package main.parserdota.dltvmatches;
 
 public class ParsingMainDLTVMatches {
 }

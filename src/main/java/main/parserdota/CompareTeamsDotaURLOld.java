@@ -1,9 +1,9 @@
-package main.parserDota;
+package main.parserdota;
 
-import main.parserDota.DLTVMatches.ParsingOldDLTVMatches;
-import main.parserDota.DotabuffParsing.ParsingDotabuffTeam1;
-import main.parserDota.DotabuffParsing.ParsingDotabuffTeam2;
-import main.parserDota.Heroes.Heroes;
+import main.parserdota.dltvmatches.ParsingOldDLTVMatches;
+import main.parserdota.dotabuffParsing.ParsingDotabuffTeam1;
+import main.parserdota.dotabuffParsing.ParsingDotabuffTeam2;
+import main.parserdota.heroes.Heroes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ public class CompareTeamsDotaURLOld {
 
 
 
-        String url = "https://ru.dltv.org/matches/421361/carstensz-vs-call911-lunar-snake-trophy-2";
+        String url = "https://ru.dltv.org/matches/421508/tundra-esports-vs-team-tidebound-clavision-masters-2025-snow-ruyi";
 
 
 

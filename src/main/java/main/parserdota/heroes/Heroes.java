@@ -1,4 +1,4 @@
-package main.parserDota.Heroes;
+package main.parserdota.heroes;
 
 import java.util.HashMap;
 import java.util.Map;

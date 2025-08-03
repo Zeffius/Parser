@@ -1,6 +1,5 @@
-package main.parserDota.DotabuffParsing;
+package main.parserdota.dotabuffParsing;
 
-import main.parserDota.Heroes.Heroes;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -12,20 +11,22 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static main.parserDota.CompareTeamsDotaManual.heroesTeamManual1;
-import static main.parserDota.CompareTeamsDotaManual.heroesTeamManual2;
-import static main.parserDota.CompareTeamsDotaURL.heroesTeamUrl1;
-import static main.parserDota.CompareTeamsDotaURL.heroesTeamUrl2;
-import static main.parserDota.CompareTeamsDotaURLOld.heroesTeamUrl3;
-import static main.parserDota.CompareTeamsDotaURLOld.heroesTeamUrl4;
-import static main.parserDota.CompareTeamsDotabuff.heroesTeamUrl5;
-import static main.parserDota.CompareTeamsDotabuff.heroesTeamUrl6;
+import static main.parserdota.CompareTeamsDotaManual.heroesTeamManual1;
+import static main.parserdota.CompareTeamsDotaManual.heroesTeamManual2;
+import static main.parserdota.CompareTeamsDotaURL.heroesTeamUrl1;
+import static main.parserdota.CompareTeamsDotaURL.heroesTeamUrl2;
+import static main.parserdota.CompareTeamsDotaURLOld.heroesTeamUrl3;
+import static main.parserdota.CompareTeamsDotaURLOld.heroesTeamUrl4;
+
 
 public class ParsingDotabuffTeam1 {
 
     public static void parsingDotabuff(Map <String, String> heroes1, byte identifier) {
         List<String> heroesTeam1 = new ArrayList<>();
         List<String> heroesTeam2 = new ArrayList<>();
+        double disAdvantage = 0.0;
+        double winrate = 0;
+
         if (identifier==0) {
             heroesTeam1 = heroesTeamManual1;
             heroesTeam2 = heroesTeamManual2;
@@ -40,16 +41,8 @@ public class ParsingDotabuffTeam1 {
             heroesTeam1 = heroesTeamUrl3;
             heroesTeam2 = heroesTeamUrl4;
         }
-        else if (identifier==3)
-        {
-            heroesTeam1 = heroesTeamUrl5;
-            heroesTeam2 = heroesTeamUrl6;
-        }
       else System.out.println("Хуета в дотатабафф парсинг тим 1");
 
-
-            double disAdvantage = 0.0;
-            double winrate = 0;
             for(String hero : heroesTeam1) {
                 String url = heroes1.get(hero);
                 String userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0"; // User-Agent
@@ -114,7 +107,7 @@ public class ParsingDotabuffTeam1 {
                 }
             }
 
-            if (disAdvantage>10.0||disAdvantage<10.0) System.out.println("МАТЧ");
+//            if (disAdvantage>10.0||disAdvantage<10.0) System.out.println("МАТЧ");
 
             System.out.println("ОБЩАЯ СТАТИСТИКА");
             System.out.println("Предположительный винрейт команды 1 по отношению ко второй: " + winrate/25);

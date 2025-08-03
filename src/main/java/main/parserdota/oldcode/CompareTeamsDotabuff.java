@@ -1,10 +1,9 @@
-package main.parserDota;
+package main.parserdota.oldcode;
 
-import main.parserDota.DLTVMatches.ParsingOldDLTVMatches;
-import main.parserDota.DotabuffParsing.DotabuffMatches;
-import main.parserDota.DotabuffParsing.ParsingDotabuffTeam1;
-import main.parserDota.DotabuffParsing.ParsingDotabuffTeam2;
-import main.parserDota.Heroes.Heroes;
+import main.parserdota.dotabuffParsing.DotabuffMyMatchesDota;
+import main.parserdota.dotabuffParsing.ParsingDotabuffTeam1;
+import main.parserdota.dotabuffParsing.ParsingDotabuffTeam2;
+import main.parserdota.heroes.Heroes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +34,7 @@ public class CompareTeamsDotabuff {
         int columnWidth = 40;
 
         Map<String, String> heroes = Heroes.toHeroes();
-        List <String> heroesTeam = DotabuffMatches.parseDotabuffMatches(url); //DotabuffMatches
+        List <String> heroesTeam = DotabuffMyMatchesDota.parseDotabuffMatches(url); //DotabuffMatches
         System.out.printf("%-" + columnWidth + "s%s%n", "Команда 1:", "Команда 2:");
 //        for(int i = 0; i<5;i++)
 //        {

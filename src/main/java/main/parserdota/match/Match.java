@@ -1,4 +1,4 @@
-package main.parserDota.Match;
+package main.parserdota.match;
 
 public class Match {
     private String team1;

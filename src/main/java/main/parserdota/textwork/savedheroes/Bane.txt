@@ -1,0 +1,125 @@
+Chen | 8.54% | 44.47%
+Lycan | 5.68% | 44.25%
+Naga Siren | 4.87% | 45.80%
+Omniknight | 3.22% | 45.88%
+Dark Seer | 3.19% | 46.84%
+Chaos Knight | 3.08% | 45.47%
+Silencer | 2.80% | 44.44%
+Meepo | 2.38% | 43.21%
+Enchantress | 2.31% | 46.97%
+Lone Druid | 2.02% | 46.56%
+Tidehunter | 1.94% | 47.55%
+Terrorblade | 1.74% | 50.32%
+Slardar | 1.73% | 46.15%
+Beastmaster | 1.63% | 52.64%
+Spirit Breaker | 1.61% | 47.72%
+Spectre | 1.60% | 45.93%
+Abaddon | 1.59% | 45.27%
+Clinkz | 1.59% | 46.53%
+Centaur Warrunner | 1.56% | 46.51%
+Brewmaster | 1.50% | 48.77%
+Clockwerk | 1.41% | 47.01%
+Oracle | 1.36% | 45.88%
+Slark | 1.33% | 49.70%
+Drow Ranger | 1.30% | 47.25%
+Death Prophet | 1.30% | 50.86%
+Necrophos | 1.24% | 45.92%
+Phantom Lancer | 1.23% | 47.71%
+Treant Protector | 1.20% | 49.37%
+Ogre Magi | 1.14% | 47.82%
+Wraith King | 1.13% | 44.25%
+Pudge | 1.10% | 47.12%
+Bristleback | 1.01% | 53.37%
+Ursa | 0.99% | 47.54%
+Doom | 0.98% | 55.01%
+Shadow Demon | 0.93% | 50.30%
+Dark Willow | 0.82% | 50.14%
+Alchemist | 0.80% | 47.84%
+Warlock | 0.77% | 47.57%
+Riki | 0.75% | 49.74%
+Bloodseeker | 0.73% | 49.54%
+Pugna | 0.72% | 48.35%
+Luna | 0.70% | 49.32%
+Razor | 0.70% | 49.42%
+Gyrocopter | 0.68% | 50.92%
+Disruptor | 0.58% | 48.03%
+Vengeful Spirit | 0.55% | 44.54%
+Hoodwink | 0.47% | 51.15%
+Marci | 0.46% | 50.40%
+Dawnbreaker | 0.38% | 46.39%
+Keeper of the Light | 0.34% | 51.31%
+Leshrac | 0.22% | 48.22%
+Outworld Destroyer | 0.20% | 47.45%
+Tusk | 0.19% | 52.65%
+Shadow Shaman | 0.18% | 47.35%
+Mirana | 0.17% | 48.80%
+Viper | 0.17% | 51.24%
+Sniper | 0.14% | 51.29%
+Visage | 0.11% | 49.56%
+Undying | 0.06% | 47.25%
+Broodmother | 0.06% | 46.91%
+Void Spirit | 0.04% | 48.01%
+Elder Titan | -0.01% | 50.20%
+Magnus | -0.02% | 50.33%
+Medusa | -0.03% | 47.60%
+Winter Wyvern | -0.04% | 47.43%
+Tiny | -0.05% | 54.85%
+Juggernaut | -0.08% | 46.99%
+Sand King | -0.08% | 52.24%
+Huskar | -0.10% | 51.23%
+Grimstroke | -0.12% | 51.02%
+Tinker | -0.13% | 51.52%
+Ancient Apparition | -0.15% | 48.42%
+Nyx Assassin | -0.16% | 47.93%
+Anti-Mage | -0.18% | 47.89%
+Axe | -0.21% | 46.48%
+Nature's Prophet | -0.23% | 49.57%
+Earthshaker | -0.24% | 50.00%
+Io | -0.29% | 49.93%
+Earth Spirit | -0.34% | 50.83%
+Witch Doctor | -0.36% | 46.41%
+Dazzle | -0.37% | 47.50%
+Ringmaster | -0.41% | 52.70%
+Mars | -0.41% | 51.18%
+Crystal Maiden | -0.43% | 50.64%
+Phoenix | -0.44% | 49.44%
+Kunkka | -0.49% | 50.82%
+Arc Warden | -0.50% | 49.73%
+Troll Warlord | -0.52% | 49.30%
+Zeus | -0.56% | 50.07%
+Monkey King | -0.59% | 55.56%
+Underlord | -0.59% | 51.73%
+Snapfire | -0.60% | 52.13%
+Muerta | -0.62% | 51.81%
+Venomancer | -0.67% | 48.49%
+Invoker | -0.69% | 51.13%
+Lion | -0.69% | 50.74%
+Enigma | -0.73% | 50.35%
+Lich | -0.73% | 47.41%
+Shadow Fiend | -0.74% | 49.48%
+Sven | -0.80% | 50.13%
+Templar Assassin | -0.82% | 52.40%
+Weaver | -0.85% | 50.41%
+Bounty Hunter | -0.86% | 51.24%
+Jakiro | -0.86% | 52.69%
+Timbersaw | -1.00% | 51.81%
+Rubick | -1.04% | 52.42%
+Batrider | -1.07% | 54.69%
+Pangolier | -1.10% | 55.46%
+Skywrath Mage | -1.16% | 50.54%
+Lina | -1.17% | 55.15%
+Legion Commander | -1.25% | 47.41%
+Night Stalker | -1.31% | 51.44%
+Queen of Pain | -1.43% | 50.23%
+Phantom Assassin | -1.46% | 55.67%
+Primal Beast | -1.49% | 53.75%
+Dragon Knight | -1.70% | 51.55%
+Windranger | -1.71% | 52.85%
+Faceless Void | -1.87% | 52.87%
+Kez | -1.88% | 54.49%
+Techies | -1.98% | 53.47%
+Storm Spirit | -2.11% | 53.08%
+Puck | -2.21% | 52.51%
+Ember Spirit | -2.49% | 53.44%
+Lifestealer | -2.88% | 50.42%
+Morphling | -3.70% | 57.03%
